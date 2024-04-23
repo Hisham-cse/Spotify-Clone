@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <div class="container flex bg-black">
+    <div class="container flex">
         <div class="left">
+            <div class="cross">
+                <img width="30" class="invert" src="cross.svg" alt="">
+            </div>
             <div class="home bg-grey rounded m-1">
-                <div class="logo"><img class="invert" src="logo.svg" alt="logo"></div>
+                <div class="logo"><img width="120" class="invert" src="logo.svg" alt="logo"></div>
                 <ul>
                     <li><img class="invert" src="home.svg" alt="Home">Home</li>
                     <li><img class="invert" src="search.svg" alt="Search">Search</li>
@@ -54,16 +57,19 @@
             </div>
         </div>
 
-        <div class="right bg-grey rounded mt-1 ">
+        <div class="right bg-grey rounded mt-1 bg-black">
+
             <div class="header rounded ">
                 <div class="nav">
-                    <img class="l-arrow" src="left-arrow.svg" alt="">
+                    <img class="hamburger invert" src="hamburger.svg" alt="">
+                    <img class="l-arrow items-center justify-center" src="left-arrow.svg" alt="">
                     <img class="l-arrow" src="right-arrow.svg" alt="">
                 </div>
                 <div class="buttons">
                     <button class="Signupbtn ">Sign up</button>
                     <button class="Loginbtn">Log in</button>
                 </div>
+
             </div>
             <div class="spotify-playlist">
                 <h1>Spotify-playlist</h1>
@@ -249,21 +255,25 @@
                             Just lean back and enjoy relaxed beats.</p>
                     </div>
                 </div>
-                <div class="playbar flex justify-center invert">
+                <div class="playbar">
+
                     <div class="seekbar">
                         <div class="circle">
-                            
+
                         </div>
                     </div>
-                    <div class="songinfo">
+                    <div class="abovebar">
+                        <div class="songinfo">
 
-                    </div>
-                    <div class="songButtons flex">
-                        <img src="prevsong.svg" alt="">
-                        <img src="play.svg" alt="">
-                        <img src="nextsong.svg" alt="">
-                    </div>
-                    <div class="songtime">
+                        </div>
+                        <div class="songButtons flex">
+                            <img width="35" id="prev" src="prevsong.svg" alt="">
+                            <img width="35" id="play" src="play.svg" alt="">
+                            <img width="35" id="next" src="nextsong.svg" alt="">
+                        </div>
+                        <div class="songtime">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
