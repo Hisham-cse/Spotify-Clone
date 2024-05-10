@@ -155,6 +155,14 @@ async function main() {
         currentSong.volume=parseInt(e.target.value)/100
     })
     //load the playlist whenever card is clicked 
+    Array.from(document.getElementsByClassName("card")).forEach(e=>{
+        console.log(e);
+        e.addEventListener("click",async item=>{
+            console.log(item.target,item.target.dataset);
+            songs = await getSongs(`songs/${item.dataset.folder}`)
+            
+        })
+    })
 }
 main()
 // console.log(formatTime(231.45));
