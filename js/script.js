@@ -1,6 +1,6 @@
 let currentSong =new Audio();
-
 let songs ;
+let currentFolder
 
 function formatTime(seconds) {
     // Round off seconds
@@ -22,6 +22,7 @@ function formatTime(seconds) {
 }
 async function getSongs(folder) {
 
+    currentFolder=folder
     let a = await fetch(`http://127.0.0.1:5500/${folder}/`)
     let response = await a.text();
     
@@ -40,7 +41,7 @@ async function getSongs(folder) {
 }
 const playMusic=(track,pause=false)=>{
     //  var audio = new Audio("/songs/"+track)
-    currentSong.src = `/${folder}/`+track
+    currentSong.src = `/${currentFolder}/`+track
     if(!pause){
     currentSong.play()
     play.src="pause.svg"
@@ -153,7 +154,7 @@ async function main() {
         console.log("setting volume to",e.target.value,"/ 100")
         currentSong.volume=parseInt(e.target.value)/100
     })
-
+    //load the playlist whenever card is clicked 
 }
 main()
 // console.log(formatTime(231.45));
